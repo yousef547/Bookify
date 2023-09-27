@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Bookify.Web.Core.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bookify.Web.Data
@@ -9,5 +10,12 @@ namespace Bookify.Web.Data
             : base(options)
         {
         }
+
+        public DbSet<Category> Categories { get; set; }
+        //protected override void OnModelCreating(ModelBuilder builder)
+        //{
+        //   builder.Entity<Category>().Property(x => x.CreatedOn).HasDefaultValueSql("GETDATE()");
+        //    base.OnModelCreating(builder);
+        //}
     }
 }
