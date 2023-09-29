@@ -13,6 +13,20 @@
 
   <ItemGroup>
     <None Include="GlobalUsings.cs" />
+    <None Include="wwwroot\assets\css\fonts\%40fortawesome\fa-brands-400.woff2" />
+    <None Include="wwwroot\assets\css\fonts\%40fortawesome\fa-regular-400.woff2" />
+    <None Include="wwwroot\assets\css\fonts\%40fortawesome\fa-solid-900.woff2" />
+    <None Include="wwwroot\assets\css\fonts\%40fortawesome\fa-v4compatibility.woff2" />
+    <None Include="wwwroot\assets\css\fonts\bootstrap-icons\bootstrap-icons.woff2" />
+    <None Include="wwwroot\assets\css\fonts\fonticon\fonticon.scss" />
+    <None Include="wwwroot\assets\css\fonts\fonticon\fonticon.svg" />
+    <None Include="wwwroot\assets\css\fonts\fonticon\fonticon.woff2" />
+    <None Include="wwwroot\assets\css\fonts\line-awesome\la-brands-400.svg" />
+    <None Include="wwwroot\assets\css\fonts\line-awesome\la-brands-400.woff2" />
+    <None Include="wwwroot\assets\css\fonts\line-awesome\la-regular-400.svg" />
+    <None Include="wwwroot\assets\css\fonts\line-awesome\la-regular-400.woff2" />
+    <None Include="wwwroot\assets\css\fonts\line-awesome\la-solid-900.svg" />
+    <None Include="wwwroot\assets\css\fonts\line-awesome\la-solid-900.woff2" />
   </ItemGroup>
 
   <ItemGroup>

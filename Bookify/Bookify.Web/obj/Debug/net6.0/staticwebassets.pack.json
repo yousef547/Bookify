@@ -5,6 +5,138 @@
       "PackagePath": "staticwebassets\\Bookify.Web.bundle.scp.css"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\@fortawesome\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\@fortawesome\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\@fortawesome\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\@fortawesome\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\@fortawesome\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\@fortawesome\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\@fortawesome\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\@fortawesome\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\@fortawesome\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\@fortawesome\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\@fortawesome\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\@fortawesome\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\@fortawesome\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\@fortawesome\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\@fortawesome\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\@fortawesome\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\bootstrap-icons\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\bootstrap-icons\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\bootstrap-icons\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\bootstrap-icons\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\fonticon\\fonticon.css",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\fonticon\\fonticon.css"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\fonticon\\fonticon.eot",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\fonticon\\fonticon.eot"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\fonticon\\fonticon.html",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\fonticon\\fonticon.html"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\fonticon\\fonticon.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\fonticon\\fonticon.scss"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\fonticon\\fonticon.svg",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\fonticon\\fonticon.svg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\fonticon\\fonticon.ttf",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\fonticon\\fonticon.ttf"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\fonticon\\fonticon.woff",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\fonticon\\fonticon.woff"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\fonticon\\fonticon.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\fonticon\\fonticon.woff2"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-brands-400.eot",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-brands-400.eot"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-brands-400.svg",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-brands-400.svg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-brands-400.woff",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-brands-400.woff"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-regular-400.eot",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-regular-400.eot"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-regular-400.svg",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-regular-400.svg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-regular-400.woff",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-regular-400.woff"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-solid-900.eot",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-solid-900.eot"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-solid-900.svg",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-solid-900.svg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-solid-900.woff",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-solid-900.woff"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\fonts\\line-awesome\\la-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\line-awesome\\la-solid-900.woff2"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\css\\plugins.bundle.css",
       "PackagePath": "staticwebassets\\assets\\css\\plugins.bundle.css"
     },
@@ -39,6 +171,10 @@
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\validation-styling.js",
+      "PackagePath": "staticwebassets\\js\\validation-styling.js"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css",
