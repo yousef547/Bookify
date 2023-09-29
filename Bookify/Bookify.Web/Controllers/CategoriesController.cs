@@ -2,6 +2,7 @@
 using Bookify.Web.Core.ViewModel;
 using Bookify.Web.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Bookify.Web.Controllers
@@ -16,7 +17,7 @@ namespace Bookify.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var catogery = _context.Categories.ToList();
+            var catogery = _context.Categories.AsNoTracking().ToList();
             return View(catogery);
         }
         [HttpGet]
@@ -72,6 +73,23 @@ namespace Bookify.Web.Controllers
             _context.SaveChanges();
 
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ToggleStatus(int id)
+        {
+            var category = _context.Categories.Find(id);
+
+            if (category is null)
+                return NotFound();
+
+            category.IsDeleted = !category.IsDeleted;
+            category.LastCreatedOn = DateTime.Now;
+
+            _context.SaveChanges();
+
+            return Ok(category.LastCreatedOn.ToString());
         }
     }
 }
