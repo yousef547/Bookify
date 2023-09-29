@@ -177,6 +177,22 @@
       "PackagePath": "staticwebassets\\js\\validation-styling.js"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\animate.css\\animate.css",
+      "PackagePath": "staticwebassets\\lib\\animate.css\\animate.css"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\animate.css\\animate.min.css",
+      "PackagePath": "staticwebassets\\lib\\animate.css\\animate.min.css"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\bootbox.js\\bootbox.js",
+      "PackagePath": "staticwebassets\\lib\\bootbox.js\\bootbox.js"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\bootbox.js\\bootbox.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootbox.js\\bootbox.min.js"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.css"
     },

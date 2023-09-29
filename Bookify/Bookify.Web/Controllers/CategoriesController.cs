@@ -35,6 +35,7 @@ namespace Bookify.Web.Controllers
             var category = new Category { Name = model.Name };
             _context.Categories.Add(category);
             _context.SaveChanges();
+            TempData["Message"] = "Saved successfully";
             return RedirectToAction(nameof(Index));
         }
 

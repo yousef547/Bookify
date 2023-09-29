@@ -17,6 +17,10 @@
         "css/bootstrap.min.css",
         "css/bootstrap.min.css.map"
       ]
+    },
+    {
+      "library": "toastify-js@1.12.0",
+      "destination": "wwwroot/lib/toastify-js/"
     }
   ]
 }

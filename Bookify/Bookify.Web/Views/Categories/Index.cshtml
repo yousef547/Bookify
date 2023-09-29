@@ -129,23 +129,20 @@
             $('body').delegate('.js-toggle-status', 'click', function () {
                 var btn = $(this);
 
-                //bootbox.confirm({
-                //    message: "Are you sure that you need to toggle this item status?",
-                //    buttons: {
-                //        confirm: {
-                //            label: 'Yes',
-                //            className: 'btn-danger'
-                //        },
-                //        cancel: {
-                //            label: 'No',
-                //            className: 'btn-secondary'
-                //        }
-                //    },
-                //    callback: function (result) {
-                //        if (result) {
-                //        }
-                //    }
-                //});
+                bootbox.confirm({
+                    message: "Are you sure that you need to toggle this item status?",
+                    buttons: {
+                        confirm: {
+                            label: 'Yes',
+                            className: 'btn-danger'
+                        },
+                        cancel: {
+                            label: 'No',
+                            className: 'btn-secondary'
+                        }
+                    },
+                    callback: function (result) {
+                        if (result) {
                             $.post({
                                 url: '/Categories/ToggleStatus/' + btn.data('id'),
                                 data: {
@@ -159,12 +156,15 @@
                                     row.find('.js-updated-on').html(lastUpdatedOn);
                                     row.addClass('animate__animated animate__flash');
 
-                                    //showSuccessMessage();
+                                    showSuccessMessage();
                                 },
-                                //error: function () {
-                                //    showErrorMessage();
-                                //}
+                                error: function () {
+                                    showErrorMessage();
+                                }
                             });
+                        }
+                    }
+                });
             });
         });
     </script>
