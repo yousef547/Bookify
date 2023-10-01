@@ -161,6 +161,14 @@
       "PackagePath": "staticwebassets\\assets\\js\\scripts.bundle.js"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\plugins\\datatables\\datatables.bundle.css",
+      "PackagePath": "staticwebassets\\assets\\plugins\\datatables\\datatables.bundle.css"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\plugins\\datatables\\datatables.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\datatables\\datatables.bundle.js"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
