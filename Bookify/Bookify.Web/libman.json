@@ -21,6 +21,10 @@
     {
       "library": "toastify-js@1.12.0",
       "destination": "wwwroot/lib/toastify-js/"
+    },
+    {
+      "library": "jquery-ajax-unobtrusive@3.2.6",
+      "destination": "wwwroot/lib/jquery-ajax-unobtrusive/"
     }
   ]
 }

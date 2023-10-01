@@ -1,6 +1,7 @@
 ﻿using Bookify.Web.Core.Models;
 using Bookify.Web.Core.ViewModel;
 using Bookify.Web.Data;
+using Bookify.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -21,25 +22,27 @@ namespace Bookify.Web.Controllers
             return View(catogery);
         }
         [HttpGet]
+        [AjaxOnly]
         public IActionResult Create()
         {
-            return View("Form");
+            return PartialView("_Form");
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(CategoryFormViewModel model)
         {
             if(!ModelState.IsValid)
-                return View("Form",model);
+                return BadRequest();
 
             var category = new Category { Name = model.Name };
             _context.Categories.Add(category);
             _context.SaveChanges();
             TempData["Message"] = "Saved successfully";
-            return RedirectToAction(nameof(Index));
+            return PartialView("_CatogeryRow",category);
         }
 
         [HttpGet]
+        [AjaxOnly]
         public IActionResult Edit(int id)
         {
             var category = _context.Categories.Find(id);
@@ -53,7 +56,7 @@ namespace Bookify.Web.Controllers
                 Name = category.Name
             };
 
-            return View("Form", viewModel);
+            return PartialView("_Form", viewModel);
         }
 
         [HttpPost]
@@ -61,7 +64,7 @@ namespace Bookify.Web.Controllers
         public IActionResult Edit(CategoryFormViewModel model)
         {
             if (!ModelState.IsValid)
-                return View("Form", model);
+                return BadRequest();
 
             var category = _context.Categories.Find(model.Id);
 
@@ -73,7 +76,7 @@ namespace Bookify.Web.Controllers
 
             _context.SaveChanges();
 
-            return RedirectToAction(nameof(Index));
+            return PartialView("_CatogeryRow", category);
         }
 
         [HttpPost]

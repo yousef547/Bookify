@@ -20,12 +20,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Categories/Form.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xGb3JtLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Categories/_CatogeryRow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xfQ2F0b2dlcnlSb3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Categories/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xfRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Home/Index.cshtml]
@@ -50,6 +54,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_ModalFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbEZvb3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
