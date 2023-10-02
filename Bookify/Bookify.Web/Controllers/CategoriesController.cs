@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Bookify.Web.Core.Models;
 using Bookify.Web.Core.ViewModel;
-using Bookify.Web.Core.ViewModels;
 using Bookify.Web.Data;
 using Bookify.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +23,7 @@ namespace Bookify.Web.Controllers
         {
             var catogery = _context.Categories.AsNoTracking().ToList();
             var viewModel = _mapper.Map<IEnumerable<CategoryViewModel>>(catogery);
-            return View(catogery);
+            return View(viewModel);
         }
         [HttpGet]
         [AjaxOnly]
@@ -45,7 +44,7 @@ namespace Bookify.Web.Controllers
             _context.SaveChanges();
 
             var viewModel = _mapper.Map<CategoryViewModel>(category);
-            return PartialView("_CatogeryRow",category);
+            return PartialView("_CatogeryRow", viewModel);
         }
 
         [HttpGet]
@@ -79,7 +78,7 @@ namespace Bookify.Web.Controllers
             _context.SaveChanges();
             var viewModel = _mapper.Map<CategoryViewModel>(category);
 
-            return PartialView("_CatogeryRow", category);
+            return PartialView("_CatogeryRow", viewModel);
         }
 
         [HttpPost]

@@ -1,4 +1,5 @@
-﻿@model CategoryViewModel
+﻿@model AuthorViewModel
+
 <tr>
     <td>@Model.Name</td>
     <td>
@@ -27,15 +28,16 @@
             <!--begin::Menu item-->
             <div class="menu-item px-3">
                 <a href="javascript:;" class="menu-link px-3 js-render-modal"
-                   data-title="Edit Model" data-url="/Categories/Edit/@Model.Id"
-                   data-update="true">
+                   data-title="Edit Author" data-url="/Authors/Edit/@Model.Id"
+                    data-update="true">
                     Edit
                 </a>
             </div>
             <!--end::Menu item-->
             <!--begin::Menu item-->
             <div class="menu-item px-3">
-                <a href="javascript:;" data-url="/Categories/ToggleStatus/@Model.Id" class="menu-link flex-stack px-3 js-toggle-status">
+                <a href="javascript:;" class="menu-link flex-stack px-3 js-toggle-status"
+                   data-url="/Authors/ToggleStatus/@Model.Id">
                     Toggle Status
                 </a>
             </div>

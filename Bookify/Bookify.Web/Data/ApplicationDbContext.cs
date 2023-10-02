@@ -10,12 +10,14 @@ namespace Bookify.Web.Data
             : base(options)
         {
         }
-
+        public DbSet<Author> Authors { get; set; }
         public DbSet<Category> Categories { get; set; }
-        //protected override void OnModelCreating(ModelBuilder builder)
-        //{
-        //   builder.Entity<Category>().Property(x => x.CreatedOn).HasDefaultValueSql("GETDATE()");
-        //    base.OnModelCreating(builder);
-        //}
+        public DbSet<Book> Books { get; set; }
+        public DbSet<BookCategory> BookCategories { get; set; }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<BookCategory>().HasKey(x => new {x.BookId,x.CategoryId});
+            base.OnModelCreating(builder);
+        }
     }
 }
