@@ -76,3 +76,5 @@ D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\obj\Debug\net6.0\refin
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\obj\Debug\net6.0\Bookify.Web.pdb
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\obj\Debug\net6.0\Bookify.Web.genruntimeconfig.cache
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\obj\Debug\net6.0\ref\Bookify.Web.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\AutoMapper.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
