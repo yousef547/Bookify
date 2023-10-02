@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RjOwi7K0CkBTk99IBZFhs9n2vFnCIkNoo52c852ud7M=",
+  "Hash": "mXCpsA3k7zaG+k3477CGXCUix+ngYIYpJ10LqSxr/po=",
   "Source": "Bookify.Web",
   "BasePath": "_content/Bookify.Web",
   "Mode": "Default",
@@ -1800,6 +1800,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\d9659733-1af5-41bc-b046-def969b0c449.png",
+      "SourceId": "Bookify.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\",
+      "BasePath": "_content/Bookify.Web",
+      "RelativePath": "images/books/d9659733-1af5-41bc-b046-def969b0c449.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\d9659733-1af5-41bc-b046-def969b0c449.png"
+    },
+    {
+      "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\no-book.jpg",
+      "SourceId": "Bookify.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\",
+      "BasePath": "_content/Bookify.Web",
+      "RelativePath": "images/books/no-book.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\no-book.jpg"
     },
     {
       "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\site.js",

@@ -177,6 +177,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\d9659733-1af5-41bc-b046-def969b0c449.png",
+      "PackagePath": "staticwebassets\\images\\books\\d9659733-1af5-41bc-b046-def969b0c449.png"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\no-book.jpg",
+      "PackagePath": "staticwebassets\\images\\books\\no-book.jpg"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
