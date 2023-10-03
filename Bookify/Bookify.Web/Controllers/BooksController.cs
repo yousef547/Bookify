@@ -3,10 +3,14 @@ using Bookify.Web.Core.Consts;
 using Bookify.Web.Core.Models;
 using Bookify.Web.Core.ViewModel;
 using Bookify.Web.Data;
+using Bookify.Web.Settings;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace Bookify.Web.Controllers
 {
@@ -15,16 +19,25 @@ namespace Bookify.Web.Controllers
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
+        private readonly Cloudinary _cloudinary;
 
         private List<string> _allowedExtensions = new() { ".jpg", ".jpeg", ".png" };
         private int _maxAllowedSize = 2097152;
 
         public BooksController(ApplicationDbContext context, IMapper mapper,
+            IOptions<CloudinarySettings> cloudinary,
             IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
             _mapper = mapper;
             _webHostEnvironment = webHostEnvironment;
+            Account account = new()
+            {
+                Cloud = cloudinary.Value.Cloud,
+                ApiKey = cloudinary.Value.APIKey,
+                ApiSecret = cloudinary.Value.APISecret,
+            };
+            _cloudinary= new Cloudinary(account);
         }
         public IActionResult Index()
         {
@@ -38,7 +51,7 @@ namespace Bookify.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(BookFormViewModel model)
+        public async Task<IActionResult> Create(BookFormViewModel model)
         {
             if (!ModelState.IsValid)
                 return View("Form", PopulateViewModel(model));
@@ -62,12 +75,24 @@ namespace Bookify.Web.Controllers
                 }
                 var imageName = $"{Guid.NewGuid()}{extension}";
 
-                var path = Path.Combine($"{_webHostEnvironment.WebRootPath}/images/books", imageName);
+                //var path = Path.Combine($"{_webHostEnvironment.WebRootPath}/images/books", imageName);
 
-                using var stream = System.IO.File.Create(path);
-                model.Image.CopyTo(stream);
+                //using var stream = System.IO.File.Create(path);
+                //await model.Image.CopyToAsync(stream);
 
-                book.ImageUrl = imageName;
+                //book.ImageUrl = imageName;
+
+                using var stream = model.Image.OpenReadStream() ;
+                var imageParams = new ImageUploadParams
+                {
+                    File = new FileDescription(imageName, stream),
+                    UseFilename = true
+                };
+                var result = await _cloudinary.UploadAsync(imageParams);
+                book.ImageUrl = result.SecureUrl.ToString();
+                book.ImageThumbanilUrl = GetThumbnail(book.ImageUrl);
+                book.ImagePublicId = result.PublicId;
+
             }
 
             foreach (var category in model.SelectedCategories)
@@ -92,7 +117,7 @@ namespace Bookify.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(BookFormViewModel model)
+        public async Task<IActionResult> Edit(BookFormViewModel model)
         {
             if (!ModelState.IsValid)
                 return View("Form", PopulateViewModel(model));
@@ -106,10 +131,12 @@ namespace Bookify.Web.Controllers
             {
                 if (!string.IsNullOrEmpty(book.ImageUrl))
                 {
-                    var oldImagePath = Path.Combine($"{_webHostEnvironment.WebRootPath}/images/books", book.ImageUrl);
+                    //var oldImagePath = Path.Combine($"{_webHostEnvironment.WebRootPath}/images/books", book.ImageUrl);
 
-                    if (System.IO.File.Exists(oldImagePath))
-                        System.IO.File.Delete(oldImagePath);
+                    //if (System.IO.File.Exists(oldImagePath))
+                    //    System.IO.File.Delete(oldImagePath);
+
+                    await _cloudinary.DeleteResourcesAsync(book.ImagePublicId);
                 }
 
                 var extension = Path.GetExtension(model.Image.FileName);
@@ -128,12 +155,22 @@ namespace Bookify.Web.Controllers
 
                 var imageName = $"{Guid.NewGuid()}{extension}";
 
-                var path = Path.Combine($"{_webHostEnvironment.WebRootPath}/images/books", imageName);
+                //var path = Path.Combine($"{_webHostEnvironment.WebRootPath}/images/books", imageName);
 
-                using var stream = System.IO.File.Create(path);
-                model.Image.CopyTo(stream);
+                //using var stream = System.IO.File.Create(path);
+                //await model.Image.CopyToAsync(stream);
 
-                model.ImageUrl = imageName;
+                //model.ImageUrl = imageName;
+
+                using var stream = model.Image.OpenReadStream();
+                var imageParams = new ImageUploadParams
+                {
+                    File = new FileDescription(imageName, stream),
+                    UseFilename = true
+                };
+                var result = await _cloudinary.UploadAsync(imageParams);
+                book.ImageUrl = result.SecureUrl.ToString();
+                book.ImagePublicId = result.PublicId;
             }
 
             else if (model.Image is null && !string.IsNullOrEmpty(book.ImageUrl))
@@ -141,6 +178,7 @@ namespace Bookify.Web.Controllers
 
             book = _mapper.Map(model, book);
             book.LastCreatedOn = DateTime.Now;
+                book.ImageThumbanilUrl = GetThumbnail(book.ImageUrl!);
 
             foreach (var category in model.SelectedCategories)
                 book.Categories.Add(new BookCategory { CategoryId = category });
@@ -169,5 +207,12 @@ namespace Bookify.Web.Controllers
 
             return Json(isAllowed);
         }
+
+        private string GetThumbnail(string url)
+        {
+            return url.Replace("upload/", "upload/c_thumb,w_200,g_face/");
+        }
+        //https://res.cloudinary.com/dizw0qyma/image/upload/c_thumb,w_200,g_face/v1696323570/pq4qrwiys7jeygbelpvb.png
+        //https://res.cloudinary.com/dizw0qyma/image/upload/v1696323570/pq4qrwiys7jeygbelpvb.png
     }
 }

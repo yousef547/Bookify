@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
+using UoN.ExpressiveAnnotations.NetCore.Attributes;
 
 namespace Bookify.Web.Core.ViewModel
 {
@@ -24,10 +25,12 @@ namespace Bookify.Web.Core.ViewModel
         public string Publisher { get; set; } = null!;
 
         [Display(Name = "Publishing Date")]
+        [AssertThat("PublishingDate <= Today()", ErrorMessage =Errors.NotAllowFutureDates)]
         public DateTime PublishingDate { get; set; } = DateTime.Now;
 
         public IFormFile? Image { get; set; }
 
+        public string? ImageThumbanilUrl { get; set; }
         public string? ImageUrl { get; set; }
 
         [MaxLength(50, ErrorMessage = Errors.MaxLength)]

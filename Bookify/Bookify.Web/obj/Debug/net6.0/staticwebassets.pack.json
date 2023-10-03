@@ -389,6 +389,14 @@
       "PackagePath": "staticwebassets\\lib\\bootswatch\\bootswatch.css"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\expressive-annotations-validate\\expressive.annotations.validate.js",
+      "PackagePath": "staticwebassets\\lib\\expressive-annotations-validate\\expressive.annotations.validate.js"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\expressive-annotations-validate\\expressive.annotations.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\expressive-annotations-validate\\expressive.annotations.validate.min.js"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\jquery-ajax-unobtrusive\\jquery.unobtrusive-ajax.js",
       "PackagePath": "staticwebassets\\lib\\jquery-ajax-unobtrusive\\jquery.unobtrusive-ajax.js"
     },

@@ -32,7 +32,7 @@
             }
 
 
-            <div class="image-input image-input-empty mb-10" data-kt-image-input="true" style="background-image: url(/images/@(string.IsNullOrEmpty(Model.ImageUrl) ? "image-placeholder.jpg" : $"/books/{Model.ImageUrl}"))">
+            <div class="image-input image-input-empty mb-10" data-kt-image-input="true" style="background-image: url( @(string.IsNullOrEmpty(Model.ImageUrl) ? "/images/image-placeholder.jpg" : Model.ImageUrl))">
                 <!--begin::Image preview wrapper-->
                 <div class="image-input-wrapper w-125px h-200px"></div>
                 <!--end::Image preview wrapper-->
