@@ -1,4 +1,5 @@
 ﻿using Bookify.Web.Core.Consts;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
@@ -9,9 +10,12 @@ namespace Bookify.Web.Core.ViewModel
         public int Id { get; set; }
 
         [MaxLength(500, ErrorMessage = Errors.MaxLength)]
+        [Remote("AllowItem", null!, AdditionalFields = "Id,AuthorId", ErrorMessage = Errors.Duplicated)]
+
         public string Title { get; set; } = null!;
 
         [Display(Name = "Author")]
+        [Remote("AllowItem", null!, AdditionalFields = "Id,Title", ErrorMessage = Errors.Duplicated)]
         public int AuthorId { get; set; }
 
         public IEnumerable<SelectListItem>? Authors { get; set; }
