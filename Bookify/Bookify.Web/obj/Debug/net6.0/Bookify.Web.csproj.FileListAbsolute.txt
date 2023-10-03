@@ -81,3 +81,6 @@ D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\AutoM
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\CloudinaryDotNet.dll
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\UoN.ExpressiveAnnotations.NetCore.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\SixLabors.ImageSharp.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\SixLabors.ImageSharp.Web.dll

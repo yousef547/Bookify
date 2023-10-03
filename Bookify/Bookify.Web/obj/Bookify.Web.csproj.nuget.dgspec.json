@@ -73,6 +73,10 @@
               "target": "Package",
               "version": "[6.0.22, )"
             },
+            "SixLabors.ImageSharp.Web": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
             "UoN.ExpressiveAnnotations.NetCore": {
               "target": "Package",
               "version": "[1.0.0, )"
