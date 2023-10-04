@@ -35,4 +35,13 @@ body {
     -webkit-appearance: none;
 }
 
+.dt-spinner + div {
+    display: none !important;
+}
+
+.h-70px {
+    height: 70px !important;
+}
+
+
 /* End Override Bootbox */

@@ -3,6 +3,7 @@ using Bookify.Web.Core.Consts;
 using Bookify.Web.Core.Models;
 using Bookify.Web.Core.ViewModel;
 using Bookify.Web.Data;
+using Bookify.Web.Filters;
 using Bookify.Web.Settings;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
@@ -12,6 +13,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using SixLabors.ImageSharp;
+using System.Linq.Dynamic.Core;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Bookify.Web.Controllers
@@ -55,6 +57,30 @@ namespace Bookify.Web.Controllers
             if (details == null) return NotFound();
             var viewModel = _mapper.Map<BookViewModel>(details);
             return View(viewModel);
+        }
+        [HttpPost]
+        public IActionResult GetBooks()
+        {
+
+            var skip = int.Parse(Request.Form["start"]);
+            var pageSize = int.Parse(Request.Form["length"]);
+            var sortColumnIndex = Request.Form["order[0][column]"];
+            var sortColumn = Request.Form[$"columns[{sortColumnIndex}][name]"];
+            var sortColumnDirection = Request.Form["order[0][dir]"];
+            var searchValue = Request.Form["search[value]"];
+
+            IQueryable<Book> books = _context.Books
+                .Include(c=>c.Author)
+                     .Include(c => c.Categories)
+                .ThenInclude(c => c.Category);
+            if (!string.IsNullOrEmpty(searchValue))
+                books = books.Where(b => b.Title.Contains(searchValue) || b.Author!.Name.Contains(searchValue));
+            books = books.OrderBy($"{sortColumn} {sortColumnDirection}");
+            var data = books.Skip(skip).Take(pageSize).ToList();
+            var mappedData = _mapper.Map<IEnumerable<BookViewModel>>(data);
+            var recordsTotal = books.Count();
+            var jsonData = new { recordsFiltered = recordsTotal, recordsTotal, data = mappedData };
+            return Ok(jsonData);
         }
 
         public IActionResult Create()
@@ -244,7 +270,22 @@ namespace Bookify.Web.Controllers
 
             return Json(isAllowed);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ToggleStatus(int id)
+        {
+            var book = _context.Books.Find(id);
 
+            if (book is null)
+                return NotFound();
+
+            book.IsDeleted = !book.IsDeleted;
+            book.LastCreatedOn = DateTime.Now;
+
+            _context.SaveChanges();
+
+            return Ok();
+        }
         private string GetThumbnail(string url)
         {
             return url.Replace("upload/", "upload/c_thumb,w_200,g_face/");
