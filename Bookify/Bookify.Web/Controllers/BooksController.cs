@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using SixLabors.ImageSharp;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Bookify.Web.Controllers
@@ -43,6 +44,17 @@ namespace Bookify.Web.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        public IActionResult Details(int id)
+        {
+            var details = _context.Books
+                .Include(c=>c.Author)
+                .Include(c=>c.Categories)
+                .ThenInclude(c=>c.Category)
+                .SingleOrDefault(x=>x.Id == id);
+            if (details == null) return NotFound();
+            var viewModel = _mapper.Map<BookViewModel>(details);
+            return View(viewModel);
         }
 
         public IActionResult Create()
@@ -77,6 +89,7 @@ namespace Bookify.Web.Controllers
                 var imageName = $"{Guid.NewGuid()}{extension}";
 
                 var path = Path.Combine($"{_webHostEnvironment.WebRootPath}/images/books", imageName);
+                var thumbPath = Path.Combine($"{_webHostEnvironment.WebRootPath}/images/books/thumb", imageName);
 
                 using var stream = System.IO.File.Create(path);
                 await model.Image.CopyToAsync(stream);
@@ -84,6 +97,11 @@ namespace Bookify.Web.Controllers
                 book.ImageUrl = $"/images/books/{imageName}";
                 book.ImageThumbanilUrl = $"/images/books/thumb/{imageName}";
 
+                using var image = SixLabors.ImageSharp.Image.Load(model.Image.OpenReadStream());
+                var ratio = (float)image.Width / 200;
+                var height = image.Height / ratio;
+                image.Mutate(i => i.Resize(width: 200, height: (int)height));
+                image.Save(thumbPath);
                 //using var stream = model.Image.OpenReadStream() ;
                 //var imageParams = new ImageUploadParams
                 //{
@@ -103,7 +121,7 @@ namespace Bookify.Web.Controllers
             _context.Add(book);
             _context.SaveChanges();
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Details),new {id=book.Id});
         }
 
         public IActionResult Edit(int id)
@@ -189,7 +207,11 @@ namespace Bookify.Web.Controllers
             }
 
             else if (model.Image is null && !string.IsNullOrEmpty(book.ImageUrl))
+            {
+
                 model.ImageUrl = book.ImageUrl;
+                model.ImageThumbanilUrl = book.ImageThumbanilUrl;
+            }
 
             book = _mapper.Map(model, book);
             book.LastCreatedOn = DateTime.Now;
@@ -200,7 +222,7 @@ namespace Bookify.Web.Controllers
 
             _context.SaveChanges();
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Details), new { id = book.Id });
         }
         private BookFormViewModel PopulateViewModel(BookFormViewModel? model = null)
         {

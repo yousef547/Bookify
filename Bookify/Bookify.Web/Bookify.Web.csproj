@@ -28,6 +28,7 @@
     <None Include="wwwroot\assets\css\fonts\line-awesome\la-solid-900.svg" />
     <None Include="wwwroot\assets\css\fonts\line-awesome\la-solid-900.woff2" />
     <None Include="wwwroot\assets\plugins\datatables\datatables.bundle.js" />
+    <None Include="wwwroot\assets\plugins\fslightbox\fslightbox.bundle.js" />
     <None Include="wwwroot\assets\plugins\tinymce\tinymce.bundle.js" />
     <None Include="wwwroot\lib\bootbox.js\bootbox.js" />
     <None Include="wwwroot\lib\bootbox.js\bootbox.min.js" />

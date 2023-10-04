@@ -169,6 +169,10 @@
       "PackagePath": "staticwebassets\\assets\\plugins\\datatables\\datatables.bundle.js"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\plugins\\fslightbox\\fslightbox.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\plugins\\fslightbox\\fslightbox.bundle.js"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\plugins\\tinymce\\skins\\content\\dark\\content.css",
       "PackagePath": "staticwebassets\\assets\\plugins\\tinymce\\skins\\content\\dark\\content.css"
     },
@@ -309,12 +313,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\bc4f7138-c3c7-47f7-be71-0e2775acd741.jpg",
+      "PackagePath": "staticwebassets\\images\\books\\bc4f7138-c3c7-47f7-be71-0e2775acd741.jpg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\c374f269-c19d-42c4-9384-c364afd63db1.jpg",
+      "PackagePath": "staticwebassets\\images\\books\\c374f269-c19d-42c4-9384-c364afd63db1.jpg"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\d9659733-1af5-41bc-b046-def969b0c449.png",
       "PackagePath": "staticwebassets\\images\\books\\d9659733-1af5-41bc-b046-def969b0c449.png"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\no-book.jpg",
       "PackagePath": "staticwebassets\\images\\books\\no-book.jpg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\thumb\\bc4f7138-c3c7-47f7-be71-0e2775acd741.jpg",
+      "PackagePath": "staticwebassets\\images\\books\\thumb\\bc4f7138-c3c7-47f7-be71-0e2775acd741.jpg"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\image-placeholder.jpg",

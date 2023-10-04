@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "364brLPM3TyDqKQ3EbmQKuxd423z9SqUI9VqVyvZ87o=",
+  "Hash": "YF73GYysuN3vPB40aDe8rbfWPvMP8QnSiCinB7DZQ/w=",
   "Source": "Bookify.Web",
   "BasePath": "_content/Bookify.Web",
   "Mode": "Default",
@@ -1768,6 +1768,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\plugins\\datatables\\datatables.bundle.js"
     },
     {
+      "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\plugins\\fslightbox\\fslightbox.bundle.js",
+      "SourceId": "Bookify.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\",
+      "BasePath": "_content/Bookify.Web",
+      "RelativePath": "assets/plugins/fslightbox/fslightbox.bundle.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\plugins\\fslightbox\\fslightbox.bundle.js"
+    },
+    {
       "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\plugins\\tinymce\\skins\\content\\dark\\content.css",
       "SourceId": "Bookify.Web",
       "SourceType": "Discovered",
@@ -2363,6 +2380,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\bc4f7138-c3c7-47f7-be71-0e2775acd741.jpg",
+      "SourceId": "Bookify.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\",
+      "BasePath": "_content/Bookify.Web",
+      "RelativePath": "images/books/bc4f7138-c3c7-47f7-be71-0e2775acd741.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\bc4f7138-c3c7-47f7-be71-0e2775acd741.jpg"
+    },
+    {
+      "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\c374f269-c19d-42c4-9384-c364afd63db1.jpg",
+      "SourceId": "Bookify.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\",
+      "BasePath": "_content/Bookify.Web",
+      "RelativePath": "images/books/c374f269-c19d-42c4-9384-c364afd63db1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\c374f269-c19d-42c4-9384-c364afd63db1.jpg"
+    },
+    {
       "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\d9659733-1af5-41bc-b046-def969b0c449.png",
       "SourceId": "Bookify.Web",
       "SourceType": "Discovered",
@@ -2395,6 +2446,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\books\\no-book.jpg"
+    },
+    {
+      "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\thumb\\bc4f7138-c3c7-47f7-be71-0e2775acd741.jpg",
+      "SourceId": "Bookify.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\",
+      "BasePath": "_content/Bookify.Web",
+      "RelativePath": "images/books/thumb/bc4f7138-c3c7-47f7-be71-0e2775acd741.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\thumb\\bc4f7138-c3c7-47f7-be71-0e2775acd741.jpg"
     },
     {
       "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\image-placeholder.jpg",
