@@ -31,5 +31,7 @@ namespace Bookify.Web.Core.Models
         public string Description { get; set; } = null!;
 
         public ICollection<BookCategory> Categories { get; set; } = new List<BookCategory>();
+        public ICollection<BookCopy> Copies { get; set; } = new List<BookCopy>();
+
     }
 }

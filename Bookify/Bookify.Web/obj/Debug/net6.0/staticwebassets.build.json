@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ITvYl7hPwN5FbPFq2EV/JssuI2fq+vTl3Km7uts7Ho4=",
+  "Hash": "eLw2vN3OSfe3/BQkymjlve6triM5wjQk687bqbWINtc=",
   "Source": "Bookify.Web",
   "BasePath": "_content/Bookify.Web",
   "Mode": "Default",
@@ -8464,6 +8464,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\books.js"
+    },
+    {
+      "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\books-details.js",
+      "SourceId": "Bookify.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\",
+      "BasePath": "_content/Bookify.Web",
+      "RelativePath": "js/books-details.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\books-details.js"
     },
     {
       "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\site.js",

@@ -1741,6 +1741,10 @@
       "PackagePath": "staticwebassets\\images\\image-placeholder.jpg"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\books-details.js",
+      "PackagePath": "staticwebassets\\js\\books-details.js"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\books.js",
       "PackagePath": "staticwebassets\\js\\books.js"
     },

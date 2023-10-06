@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xfRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/BookCopies/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0NvcGllc1xGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Books/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -70,6 +74,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_Aside.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Bc2lkZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_BookCopyRow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb29rQ29weVJvdy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_DataTablesCardHeader.cshtml]

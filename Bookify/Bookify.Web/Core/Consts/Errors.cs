@@ -8,6 +8,8 @@
         public const string MaxSize = "File cannot be more that 2 MB!";
         public const string DuplicatedBook = "Book with the same title is already exists with the same author!";
         public const string NotAllowFutureDates = "Date cannot be in the future!";
+        public const string InvalidRange = "{0} should be between {1} and {2}!";
+
 
     }
 }
