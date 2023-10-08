@@ -10,13 +10,13 @@ namespace Bookify.Web.Seeds
         {
             ApplicationUser admin = new()
             {
-                UserName = "admin",
+                UserName = "admin@bookify.com",
                 Email = "admin@bookify.com",
                 FullName = "Admin",
                 EmailConfirmed = true
             };
 
-            var user = await userManager.FindByNameAsync(admin.UserName);
+            var user = await userManager.FindByEmailAsync(admin.Email);
 
             if(user is null)
             {

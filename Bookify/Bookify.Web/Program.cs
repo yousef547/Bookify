@@ -15,6 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentity<ApplicationUser,IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -55,7 +56,7 @@ var roleManger = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRo
 var userManger = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
 await DefaultRoles.SeedAsync(roleManger);
-await DefaultUsers.SeedAdminUserAsync(userManger);
+await DefaultUsers.SeedAdminUserAsync(userManger); 
 
 app.MapControllerRoute(
     name: "default",

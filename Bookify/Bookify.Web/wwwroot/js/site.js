@@ -143,7 +143,7 @@ function onModalComplete() {
 
 $(document).ready(function () {
     //form
-    $('form').on('submit', function () {
+    $('form').not('#SignOut').on('submit', function () {
         if ($('.js-tinymce').length > 0) {
             $('.js-tinymce').each(function () {
                 var input = $(this);
@@ -245,5 +245,8 @@ $(document).ready(function () {
                 }
             }
         });
+    });
+    $('.js-signout').on('click', function () {
+        $('#SignOut').submit();
     });
 });

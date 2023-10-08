@@ -13,6 +13,10 @@
 
   <ItemGroup>
     <None Include="GlobalUsings.cs" />
+    <None Include="Views\Users\Index.cshtml" />
+    <None Include="Views\Users\_Form.cshtml" />
+    <None Include="Views\Users\_ResetPasswordForm.cshtml" />
+    <None Include="Views\Users\_UserRow.cshtml" />
     <None Include="wwwroot\assets\css\fonts\%40fortawesome\fa-brands-400.woff2" />
     <None Include="wwwroot\assets\css\fonts\%40fortawesome\fa-regular-400.woff2" />
     <None Include="wwwroot\assets\css\fonts\%40fortawesome\fa-solid-900.woff2" />
@@ -44,6 +48,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.22" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
     <PackageReference Include="SixLabors.ImageSharp.Web" Version="3.0.1" />
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.3.5" />
     <PackageReference Include="UoN.ExpressiveAnnotations.NetCore" Version="1.0.0" />
