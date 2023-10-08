@@ -1,6 +1,7 @@
 using Bookify.Web.Core.Mapping;
 using Bookify.Web.Core.Models;
 using Bookify.Web.Data;
+using Bookify.Web.Helpers;
 using Bookify.Web.Seeds;
 using Bookify.Web.Settings;
 using Microsoft.AspNetCore.Identity;
@@ -27,6 +28,8 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredLength = 8;
     options.User.RequireUniqueEmail = true;
 });
+builder.Services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, ApplicationUserClaimsPrincipalFactory>();
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddAutoMapper(Assembly.GetAssembly(typeof(MappingProfile)));
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection(nameof(CloudinarySettings)));

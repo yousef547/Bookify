@@ -27,6 +27,22 @@ namespace Bookify.Web.Controllers
         }
 
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Unlock(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+
+            if (user is null)
+                return NotFound();
+
+            var isLocked = await _userManager.IsLockedOutAsync(user);
+
+            if (isLocked)
+                await _userManager.SetLockoutEndDateAsync(user, null);
+
+            return Ok();
+        }
         public async Task<IActionResult> Index()
         {
             var users = await _userManager.Users.ToListAsync();

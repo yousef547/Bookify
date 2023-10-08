@@ -145,8 +145,32 @@
       "PackagePath": "staticwebassets\\assets\\css\\style.bundle.css"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\401.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\401.svg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\Logo_sm.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Logo_sm.png"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\Vault-bro.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\Vault-bro.svg"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\avatar.png",
       "PackagePath": "staticwebassets\\assets\\images\\avatar.png"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\bg10-dark.jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\bg10-dark.jpeg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\bg10.jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\bg10.jpeg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\login.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\login.svg"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\logo.png",

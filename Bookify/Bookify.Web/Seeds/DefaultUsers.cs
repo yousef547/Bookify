@@ -10,7 +10,7 @@ namespace Bookify.Web.Seeds
         {
             ApplicationUser admin = new()
             {
-                UserName = "admin@bookify.com",
+                UserName = "admin",
                 Email = "admin@bookify.com",
                 FullName = "Admin",
                 EmailConfirmed = true
