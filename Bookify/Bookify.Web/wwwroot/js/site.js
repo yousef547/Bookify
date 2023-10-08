@@ -14,6 +14,13 @@ function showSuccessMessage(message = 'Saved successfully!') {
     });
 }
 
+//Select2
+function applySelect2() {
+    $('.js-select2').select2();
+    $('.js-select2').on('select2:select', function (e) {
+        $('form').not('#SignOut').validate().element('#' + $(this).attr('id'));
+    });
+}
 
 var headers = $('th');
 $.each(headers, function (i) {
@@ -37,7 +44,7 @@ function showErrorMessage(message = 'Something went wrong!') {
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: message,
+        text: message.responseText !== undefined ? message.responseText : message,
         customClass: {
             confirmButton: "btn btn-outline btn-outline-dashed btn-outline-primary btn-active-light-primary"
         }
@@ -173,10 +180,7 @@ $(document).ready(function () {
 
     });
     //select 2
-    $(".js-select2").select2();
-    $('.js-select2').on('select2:select', function (e) {
-        $('form').validate().element(`# ${$(this).attr('id')}`);
-    });
+    applySelect2();
     //DataTables
     KTUtil.onDOMContentLoaded(function () {
         KTDatatables.init();
@@ -198,6 +202,7 @@ $(document).ready(function () {
             success: function (form) {
                 modal.find(".modal-body").html(form);
                 $.validator.unobtrusive.parse(modal);
+                applySelect2();
             },
             error: function () {
                 showErrorMessage();

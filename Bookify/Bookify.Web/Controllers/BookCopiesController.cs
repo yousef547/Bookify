@@ -5,6 +5,7 @@ using Bookify.Web.Data;
 using Bookify.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace Bookify.Web.Controllers
 {
@@ -60,6 +61,8 @@ namespace Bookify.Web.Controllers
                 IsAvailableForRental = book.IsAvailableForRental && model.IsAvailableForRental
             };
 
+            copy.CreatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+
             book.Copies.Add(copy);
             _context.SaveChanges();
 
@@ -97,6 +100,7 @@ namespace Bookify.Web.Controllers
             copy.EditionNumber = model.EditionNumber;
             copy.IsAvailableForRental = copy.Book!.IsAvailableForRental && model.IsAvailableForRental;
             copy.LastCreatedOn = DateTime.Now;
+            copy.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
 
             _context.SaveChanges();
 
@@ -117,6 +121,7 @@ namespace Bookify.Web.Controllers
 
             copy.IsDeleted = !copy.IsDeleted;
             copy.LastCreatedOn = DateTime.Now;
+            copy.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
 
             _context.SaveChanges();
 

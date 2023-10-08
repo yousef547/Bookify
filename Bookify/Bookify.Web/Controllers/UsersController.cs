@@ -34,193 +34,193 @@ namespace Bookify.Web.Controllers
             return View(viewModel);
         }
 
-        //[HttpGet]
-        //[AjaxOnly]
-        //public async Task<IActionResult> Create()
-        //{
-        //    var viewModel = new UserFormViewModel
-        //    {
-        //        Roles = await _roleManager.Roles
-        //                        .Select(r => new SelectListItem 
-        //                        { 
-        //                            Text = r.Name,
-        //                            Value = r.Name
-        //                        })
-        //                        .ToListAsync()
-        //    };
+        [HttpGet]
+        [AjaxOnly]
+        public async Task<IActionResult> Create()
+        {
+            var viewModel = new UserFormViewModel
+            {
+                Roles = await _roleManager.Roles
+                                .Select(r => new SelectListItem
+                                {
+                                    Text = r.Name,
+                                    Value = r.Name
+                                })
+                                .ToListAsync()
+            };
 
-        //    return PartialView("_Form", viewModel);
-        //}
+            return PartialView("_Form", viewModel);
+        }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create(UserFormViewModel model)
-        //{
-        //    if (!ModelState.IsValid)
-        //        return BadRequest();
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(UserFormViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
 
-        //    ApplicationUser user = new()
-        //    {
-        //        FullName = model.FullName,
-        //        UserName = model.UserName,
-        //        Email = model.Email,
-        //        CreatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value
-        //    };
+            ApplicationUser user = new()
+            {
+                FullName = model.FullName,
+                UserName = model.UserName,
+                Email = model.Email,
+                CreatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value
+            };
 
-        //    var result = await _userManager.CreateAsync(user, model.Password);
+            var result = await _userManager.CreateAsync(user, model.Password);
 
-        //    if (result.Succeeded)
-        //    {
-        //        await _userManager.AddToRolesAsync(user, model.SelectedRoles);
+            if (result.Succeeded)
+            {
+                await _userManager.AddToRolesAsync(user, model.SelectedRoles);
 
-        //        var viewModel = _mapper.Map<UserViewModel>(user);
-        //        return PartialView("_UserRow", viewModel);
-        //    }
+                var viewModel = _mapper.Map<UserViewModel>(user);
+                return PartialView("_UserRow", viewModel);
+            }
 
-        //    return BadRequest(string.Join(',', result.Errors.Select(e => e.Description)));
-        //}
+            return BadRequest(string.Join(',', result.Errors.Select(e => e.Description)));
+        }
 
-        //[HttpGet]
-        //[AjaxOnly]
-        //public async Task<IActionResult> Edit(string id)
-        //{
-        //    var user = await _userManager.FindByIdAsync(id);
+        [HttpGet]
+        [AjaxOnly]
+        public async Task<IActionResult> Edit(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
 
-        //    if (user is null)
-        //        return NotFound();
+            if (user is null)
+                return NotFound();
 
-        //    var viewModel = _mapper.Map<UserFormViewModel>(user);
+            var viewModel = _mapper.Map<UserFormViewModel>(user);
 
-        //    viewModel.SelectedRoles = await _userManager.GetRolesAsync(user);
-        //    viewModel.Roles = await _roleManager.Roles
-        //                        .Select(r => new SelectListItem
-        //                        {
-        //                            Text = r.Name,
-        //                            Value = r.Name
-        //                        })
-        //                        .ToListAsync();
+            viewModel.SelectedRoles = await _userManager.GetRolesAsync(user);
+            viewModel.Roles = await _roleManager.Roles
+                                .Select(r => new SelectListItem
+                                {
+                                    Text = r.Name,
+                                    Value = r.Name
+                                })
+                                .ToListAsync();
 
-        //    return PartialView("_Form", viewModel);
-        //}
+            return PartialView("_Form", viewModel);
+        }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Edit(UserFormViewModel model)
-        //{
-        //    if (!ModelState.IsValid)
-        //        return BadRequest();
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(UserFormViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
 
-        //    var user = await _userManager.FindByIdAsync(model.Id);
+            var user = await _userManager.FindByIdAsync(model.Id);
 
-        //    if (user is null)
-        //        return NotFound();
+            if (user is null)
+                return NotFound();
 
-        //    user = _mapper.Map(model, user);
-        //    user.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
-        //    user.LastUpdatedOn = DateTime.Now;
+            user = _mapper.Map(model, user);
+            user.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+            user.LastUpdatedOn = DateTime.Now;
 
-        //    var result = await _userManager.UpdateAsync(user);
+            var result = await _userManager.UpdateAsync(user);
 
-        //    if (result.Succeeded)
-        //    {
-        //        var currentRoles = await _userManager.GetRolesAsync(user);
+            if (result.Succeeded)
+            {
+                var currentRoles = await _userManager.GetRolesAsync(user);
 
-        //        var rolesUpdated = !currentRoles.SequenceEqual(model.SelectedRoles);
+                var rolesUpdated = !currentRoles.SequenceEqual(model.SelectedRoles);
 
-        //        if (rolesUpdated)
-        //        {
-        //            await _userManager.RemoveFromRolesAsync(user, currentRoles);
-        //            await _userManager.AddToRolesAsync(user, model.SelectedRoles);
-        //        }
+                if (rolesUpdated)
+                {
+                    await _userManager.RemoveFromRolesAsync(user, currentRoles);
+                    await _userManager.AddToRolesAsync(user, model.SelectedRoles);
+                }
 
-        //        var viewModel = _mapper.Map<UserViewModel>(user);
-        //        return PartialView("_UserRow", viewModel);
-        //    }
+                var viewModel = _mapper.Map<UserViewModel>(user);
+                return PartialView("_UserRow", viewModel);
+            }
 
-        //    return BadRequest(string.Join(',', result.Errors.Select(e => e.Description)));
-        //}
+            return BadRequest(string.Join(',', result.Errors.Select(e => e.Description)));
+        }
 
-        //[HttpGet]
-        //[AjaxOnly]
-        //public async Task<IActionResult> ResetPassword(string id)
-        //{
-        //    var user = await _userManager.FindByIdAsync(id);
+        [HttpGet]
+        [AjaxOnly]
+        public async Task<IActionResult> ResetPassword(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
 
-        //    if (user is null)
-        //        return NotFound();
+            if (user is null)
+                return NotFound();
 
-        //    var viewModel = new ResetPasswordFormViewModel { Id = user.Id };
+            var viewModel = new ResetPasswordFormViewModel { Id = user.Id };
 
-        //    return PartialView("_ResetPasswordForm", viewModel);
-        //}
+            return PartialView("_ResetPasswordForm", viewModel);
+        }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> ResetPassword(ResetPasswordFormViewModel model)
-        //{
-        //    if (!ModelState.IsValid)
-        //        return BadRequest();
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordFormViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
 
-        //    var user = await _userManager.FindByIdAsync(model.Id);
+            var user = await _userManager.FindByIdAsync(model.Id);
 
-        //    if (user is null)
-        //        return NotFound();
+            if (user is null)
+                return NotFound();
 
-        //    var currentPasswordHash = user.PasswordHash;
+            var currentPasswordHash = user.PasswordHash;
 
-        //    await _userManager.RemovePasswordAsync(user);
+            await _userManager.RemovePasswordAsync(user);
 
-        //    var result = await _userManager.AddPasswordAsync(user, model.Password);
+            var result = await _userManager.AddPasswordAsync(user, model.Password);
 
-        //    if (result.Succeeded)
-        //    {
-        //        user.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
-        //        user.LastUpdatedOn = DateTime.Now;
+            if (result.Succeeded)
+            {
+                user.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+                user.LastUpdatedOn = DateTime.Now;
 
-        //        await _userManager.UpdateAsync(user);
+                await _userManager.UpdateAsync(user);
 
-        //        var viewModel = _mapper.Map<UserViewModel>(user);
-        //        return PartialView("_UserRow", viewModel);
-        //    }
+                var viewModel = _mapper.Map<UserViewModel>(user);
+                return PartialView("_UserRow", viewModel);
+            }
 
-        //    user.PasswordHash = currentPasswordHash;
-        //    await _userManager.UpdateAsync(user);
+            user.PasswordHash = currentPasswordHash;
+            await _userManager.UpdateAsync(user);
 
-        //    return BadRequest(string.Join(',', result.Errors.Select(e => e.Description)));
-        //}
+            return BadRequest(string.Join(',', result.Errors.Select(e => e.Description)));
+        }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> ToggleStatus(string id)
-        //{
-        //    var user = await _userManager.FindByIdAsync(id);
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ToggleStatus(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
 
-        //    if (user is null)
-        //        return NotFound();
+            if (user is null)
+                return NotFound();
 
-        //    user.IsDeleted = !user.IsDeleted;
-        //    user.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
-        //    user.LastUpdatedOn = DateTime.Now;
+            user.IsDeleted = !user.IsDeleted;
+            user.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+            user.LastUpdatedOn = DateTime.Now;
 
-        //    await _userManager.UpdateAsync(user);
+            await _userManager.UpdateAsync(user);
 
-        //    return Ok(user.LastUpdatedOn.ToString());
-        //}
+            return Ok(user.LastUpdatedOn.ToString());
+        }
 
-        //public async Task<IActionResult> AllowUserName(UserFormViewModel model)
-        //{
-        //    var user = await _userManager.FindByNameAsync(model.UserName);
-        //    var isAllowed = user is null || user.Id.Equals(model.Id);
+        public async Task<IActionResult> AllowUserName(UserFormViewModel model)
+        {
+            var user = await _userManager.FindByNameAsync(model.UserName);
+            var isAllowed = user is null || user.Id.Equals(model.Id);
 
-        //    return Json(isAllowed);
-        //}
+            return Json(isAllowed);
+        }
 
-        //public async Task<IActionResult> AllowEmail(UserFormViewModel model)
-        //{
-        //    var user = await _userManager.FindByEmailAsync(model.Email);
-        //    var isAllowed = user is null || user.Id.Equals(model.Id);
+        public async Task<IActionResult> AllowEmail(UserFormViewModel model)
+        {
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            var isAllowed = user is null || user.Id.Equals(model.Id);
 
-        //    return Json(isAllowed);
-        //}
+            return Json(isAllowed);
+        }
     }
 }

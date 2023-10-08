@@ -1,4 +1,4 @@
-﻿@*@model UserFormViewModel
+﻿@model UserFormViewModel
 
 <form asp-action="@(!string.IsNullOrEmpty(Model?.Id) ? "Edit" : "Create")"
       data-ajax-method="post"
@@ -64,4 +64,4 @@
     }
 
     <partial name="_ModalFooter" />
-</form>*@
+</form>

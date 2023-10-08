@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using SixLabors.ImageSharp;
 using System.Linq.Dynamic.Core;
+using System.Security.Claims;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Bookify.Web.Controllers
@@ -145,6 +146,8 @@ namespace Bookify.Web.Controllers
             foreach (var category in model.SelectedCategories)
                 book.Categories.Add(new BookCategory { CategoryId = category });
 
+            book.CreatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+
             _context.Add(book);
             _context.SaveChanges();
 
@@ -169,7 +172,7 @@ namespace Bookify.Web.Controllers
             if (!ModelState.IsValid)
                 return View("Form", PopulateViewModel(model));
 
-            var book = _context.Books.Include(b => b.Categories).SingleOrDefault(b => b.Id == model.Id);
+            var book = _context.Books.Include(b => b.Categories).Include(b => b.Copies).SingleOrDefault(b => b.Id == model.Id);
 
             if (book is null)
                 return NotFound();
@@ -246,6 +249,11 @@ namespace Bookify.Web.Controllers
 
             foreach (var category in model.SelectedCategories)
                 book.Categories.Add(new BookCategory { CategoryId = category });
+            book.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+
+            if (!model.IsAvailableForRental)
+                foreach (var copy in book.Copies)
+                    copy.IsAvailableForRental = false;
 
             _context.SaveChanges();
 
@@ -282,6 +290,7 @@ namespace Bookify.Web.Controllers
 
             book.IsDeleted = !book.IsDeleted;
             book.LastCreatedOn = DateTime.Now;
+            book.CreatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
 
             _context.SaveChanges();
 

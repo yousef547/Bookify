@@ -1,14 +1,19 @@
 ﻿using AutoMapper;
+using Bookify.Web.Core.Consts;
 using Bookify.Web.Core.Models;
 using Bookify.Web.Core.ViewModel;
 using Bookify.Web.Data;
 using Bookify.Web.Filters;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Security.Claims;
 
 namespace Bookify.Web.Controllers
 {
+
+    [Authorize(Roles = AppRoles.Archive)]
     public class CategoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -40,6 +45,8 @@ namespace Bookify.Web.Controllers
 
 
             var category = _mapper.Map<Category>(model);
+            category.CreatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+
             _context.Add(category);
             _context.SaveChanges();
 
@@ -74,6 +81,8 @@ namespace Bookify.Web.Controllers
 
             category = _mapper.Map(model, category);
             category.LastCreatedOn = DateTime.Now;
+            category.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+
 
             _context.SaveChanges();
             var viewModel = _mapper.Map<CategoryViewModel>(category);
@@ -92,6 +101,8 @@ namespace Bookify.Web.Controllers
 
             category.IsDeleted = !category.IsDeleted;
             category.LastCreatedOn = DateTime.Now;
+            category.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+
 
             _context.SaveChanges();
 
