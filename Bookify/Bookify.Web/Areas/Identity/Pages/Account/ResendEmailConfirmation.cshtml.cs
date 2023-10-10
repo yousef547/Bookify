@@ -14,26 +14,30 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using Bookify.Web.Services;
 
 namespace Bookify.Web.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ResendEmailConfirmationModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly IEmailSender _emailSender;
+		private readonly UserManager<ApplicationUser> _userManager;
+		private readonly IEmailSender _emailSender;
 
-        public ResendEmailConfirmationModel(UserManager<ApplicationUser> userManager, IEmailSender emailSender)
-        {
-            _userManager = userManager;
-            _emailSender = emailSender;
-        }
+		private readonly IEmailBodyBuilder _emailBodyBuilder;
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
-        [BindProperty]
+		public ResendEmailConfirmationModel(UserManager<ApplicationUser> userManager, IEmailSender emailSender, IEmailBodyBuilder emailBodyBuilder)
+		{
+			_userManager = userManager;
+			_emailSender = emailSender;
+			_emailBodyBuilder = emailBodyBuilder;
+		}
+
+		/// <summary>
+		///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+		///     directly from your code. This API may change or be removed in future releases.
+		/// </summary>
+		[BindProperty]
         public InputModel Input { get; set; }
 
         /// <summary>
@@ -51,9 +55,13 @@ namespace Bookify.Web.Areas.Identity.Pages.Account
             public string Email { get; set; }
         }
 
-        public void OnGet()
+        public void OnGet(string email)
         {
-        }
+			Input = new()
+			{
+				Email = email,
+			};
+		}
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -69,20 +77,28 @@ namespace Bookify.Web.Areas.Identity.Pages.Account
                 return Page();
             }
 
-            var userId = await _userManager.GetUserIdAsync(user);
-            var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-            var callbackUrl = Url.Page(
-                "/Account/ConfirmEmail",
-                pageHandler: null,
-                values: new { userId = userId, code = code },
-                protocol: Request.Scheme);
-            await _emailSender.SendEmailAsync(
-                Input.Email,
-                "Confirm your email",
-                $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+			var userId = await _userManager.GetUserIdAsync(user);
+			var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+			code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+			var callbackUrl = Url.Page(
+				"/Account/ConfirmEmail",
+				pageHandler: null,
+				values: new { userId = userId, code = code },
+			protocol: Request.Scheme);
 
-            ModelState.AddModelError(string.Empty, "Verification email sent. Please check your email.");
+			var body = _emailBodyBuilder.GetEmailBody(
+				"https://res.cloudinary.com/devcreed/image/upload/v1668732314/icon-positive-vote-1_rdexez.svg",
+						$"Hey {user.FullName}, thanks for joining us!",
+						"please confirm your email",
+						$"{HtmlEncoder.Default.Encode(callbackUrl!)}",
+						"Active Account!"
+				);
+
+			await _emailSender.SendEmailAsync(
+				user.Email,
+				"Confirm your email", body);
+
+			ModelState.AddModelError(string.Empty, "Verification email sent. Please check your email.");
             return Page();
         }
     }

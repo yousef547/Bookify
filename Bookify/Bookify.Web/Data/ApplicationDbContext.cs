@@ -15,6 +15,9 @@ namespace Bookify.Web.Data
         public DbSet<Book> Books { get; set; }
         public DbSet<BookCategory> BookCategories { get; set; }
         public DbSet<BookCopy> BookCopies { get; set; }
+        public DbSet<Governorate> Governorates { get; set; }
+        public DbSet<Area> Areas { get; set; }
+        public DbSet<Subscriber> Subscribers { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
 
@@ -26,6 +29,13 @@ namespace Bookify.Web.Data
                 .HasDefaultValueSql("NEXT VALUE FOR shared.SerialNumber");
 
             builder.Entity<BookCategory>().HasKey(x => new {x.BookId,x.CategoryId});
+
+            var cascadeFKs = builder.Model.GetEntityTypes()
+           .SelectMany(t => t.GetForeignKeys())
+           .Where(fk => fk.DeleteBehavior == DeleteBehavior.Cascade && !fk.IsOwnership);
+
+            foreach (var fk in cascadeFKs)
+                fk.DeleteBehavior = DeleteBehavior.Restrict;
 
             base.OnModelCreating(builder);
         }

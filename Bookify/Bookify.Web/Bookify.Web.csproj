@@ -13,6 +13,10 @@
 
   <ItemGroup>
     <None Include="GlobalUsings.cs" />
+    <None Include="Views\Subscribers\Details.cshtml" />
+    <None Include="Views\Subscribers\Form.cshtml" />
+    <None Include="Views\Subscribers\Index.cshtml" />
+    <None Include="Views\Subscribers\_Result.cshtml" />
     <None Include="Views\Users\Index.cshtml" />
     <None Include="Views\Users\_Form.cshtml" />
     <None Include="Views\Users\_ResetPasswordForm.cshtml" />
@@ -56,6 +60,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\books\thumb\" />
+    <Folder Include="wwwroot\images\users\" />
   </ItemGroup>
 
 </Project>

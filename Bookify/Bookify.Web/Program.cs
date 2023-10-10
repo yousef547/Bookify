@@ -3,8 +3,10 @@ using Bookify.Web.Core.Models;
 using Bookify.Web.Data;
 using Bookify.Web.Helpers;
 using Bookify.Web.Seeds;
+using Bookify.Web.Services;
 using Bookify.Web.Settings;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -30,10 +32,18 @@ builder.Services.Configure<IdentityOptions>(options =>
 });
 builder.Services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, ApplicationUserClaimsPrincipalFactory>();
 
+builder.Services.AddTransient<IImageService, ImageService>();
+builder.Services.AddTransient<IEmailSender, EmailSender>();
+builder.Services.AddTransient<IEmailBodyBuilder, EmailBodyBuilder>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddAutoMapper(Assembly.GetAssembly(typeof(MappingProfile)));
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection(nameof(CloudinarySettings)));
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection(nameof(MailSettings)));
 builder.Services.AddExpressiveAnnotations();
+builder.Services.Configure<SecurityStampValidatorOptions>(option =>
+{
+    option.ValidationInterval = TimeSpan.Zero;
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
