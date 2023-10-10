@@ -365,6 +365,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\Subscribers\\a2722947-c2a1-4f38-8a44-59245a58eed1.png",
+      "PackagePath": "staticwebassets\\images\\Subscribers\\a2722947-c2a1-4f38-8a44-59245a58eed1.png"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\Subscribers\\thumb\\a2722947-c2a1-4f38-8a44-59245a58eed1.png",
+      "PackagePath": "staticwebassets\\images\\Subscribers\\thumb\\a2722947-c2a1-4f38-8a44-59245a58eed1.png"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\02dd520d-587d-4760-9f66-8ff150ed4302.jpg",
       "PackagePath": "staticwebassets\\images\\books\\02dd520d-587d-4760-9f66-8ff150ed4302.jpg"
     },
@@ -1807,6 +1815,10 @@
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\subscriber-form.js",
+      "PackagePath": "staticwebassets\\js\\subscriber-form.js"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\validation-styling.js",

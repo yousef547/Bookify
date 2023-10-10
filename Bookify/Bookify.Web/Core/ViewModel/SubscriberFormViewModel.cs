@@ -19,7 +19,7 @@ namespace Bookify.Web.Core.ViewModel
         public string LastName { get; set; } = null!;
 
         [Display(Name = "Date Of Birth")]
-        [AssertThat("DateOfBirth <= Today()", ErrorMessage = Errors.NotAllowFutureDates)]
+        [AssertThat("DateOfBirth < Today()", ErrorMessage = Errors.NotAllowFutureDates)]
         public DateTime DateOfBirth { get; set; } = DateTime.Now;
 
         [MaxLength(14), Display(Name = "National ID"),

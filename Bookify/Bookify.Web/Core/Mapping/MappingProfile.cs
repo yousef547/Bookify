@@ -43,6 +43,14 @@ namespace Bookify.Web.Core.Mapping
                .ForMember(dest => dest.NormalizedUserName, opt => opt.MapFrom(src => src.UserName.ToUpper()))
                .ReverseMap();
 
+            //Governorates & Areas
+            CreateMap<Governorate, SelectListItem>()
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Text, opt => opt.MapFrom(src => src.Name));
+
+            CreateMap<Area, SelectListItem>()
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Text, opt => opt.MapFrom(src => src.Name));
             //Subscribers
             CreateMap<Subscriber, SubscriberFormViewModel>().ReverseMap();
 
