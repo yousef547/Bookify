@@ -6,8 +6,10 @@ using Bookify.Web.Data;
 using Bookify.Web.Filters;
 using Bookify.Web.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
@@ -18,13 +20,14 @@ namespace Bookify.Web.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
-
+        private readonly IDataProtector _dataProtector;
         private readonly IImageService _imageService;
 
-        public SubscribersController(ApplicationDbContext context, IMapper mapper, IImageService imageService)
+        public SubscribersController(ApplicationDbContext context, IMapper mapper, IImageService imageService, IDataProtectionProvider dataProtector)
         {
             _context = context;
             _mapper = mapper;
+            _dataProtector = dataProtector.CreateProtector("MySecureKey");
             _imageService = imageService;
         }
 
@@ -48,22 +51,25 @@ namespace Bookify.Web.Controllers
                                 || s.MobileNumber == model.Value);
 
             var viewModel = _mapper.Map<SubscriberSearchResultViewModel>(subscriber);
-
+            if(subscriber is not null)
+                viewModel.Key = _dataProtector.Protect(subscriber!.Id.ToString());
             return PartialView("_Result", viewModel);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(string id)
         {
+            var subscriberID = _dataProtector.Unprotect(id);
             var subscriber = _context.Subscribers
                 .Include(s => s.Governorate)
                 .Include(s => s.Area)
-                .SingleOrDefault(s => s.Id == id);
+                .SingleOrDefault(s => s.Id == int.Parse(subscriberID));
 
             if (subscriber is null)
                 return NotFound();
 
-            var viewModel = _mapper.Map<SubscriberViewModel>(subscriber);
 
+            var viewModel = _mapper.Map<SubscriberViewModel>(subscriber);
+            viewModel.Key = id;
             return View(viewModel);
         }
 
@@ -82,7 +88,7 @@ namespace Bookify.Web.Controllers
 
             var Subscriber = _mapper.Map<Subscriber>(model);
 
-            var imageName = $"{Guid.NewGuid()}{Path.GetExtension(model.Image.FileName)}";
+            var imageName = $"{Guid.NewGuid()}{Path.GetExtension(model.Image!.FileName)}";
             var imagePath = "/images/Subscribers";
 
             var (isUploaded, errorMessage) = await _imageService.UploadAsync(model.Image, imageName, imagePath, hasThumbnail: true);
@@ -101,20 +107,23 @@ namespace Bookify.Web.Controllers
             _context.SaveChanges();
 
             //TODO: Send welcome email
+                var protectId = _dataProtector.Protect(Subscriber.Id.ToString());
 
-            return RedirectToAction(nameof(Details), new { id = Subscriber.Id });
+            return RedirectToAction(nameof(Details), new { id = protectId });
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult Edit(string id)
         {
-            var Subscriber = _context.Subscribers.Find(id);
+            var protectId = _dataProtector.Unprotect(id);
+
+            var Subscriber = _context.Subscribers.Find(protectId);
 
             if (Subscriber is null)
                 return NotFound();
 
             var model = _mapper.Map<SubscriberFormViewModel>(Subscriber);
             var viewModel = PopulateViewModel(model);
-
+            viewModel.Key = id;
             return View("Form", viewModel);
         }
 
@@ -125,7 +134,9 @@ namespace Bookify.Web.Controllers
             if (!ModelState.IsValid)
                 return View("Form", PopulateViewModel(model));
 
-            var Subscriber = _context.Subscribers.Find(model.Id);
+            var protectId = _dataProtector.Unprotect(model!.Key);
+
+            var Subscriber = _context.Subscribers.Find(protectId);
 
             if (Subscriber is null)
                 return NotFound();
@@ -178,24 +189,39 @@ namespace Bookify.Web.Controllers
 
         public IActionResult AllowNationalId(SubscriberFormViewModel model)
         {
-            var Subscriber = _context.Subscribers.SingleOrDefault(b => b.NationalId == model.NationalId);
-            var isAllowed = Subscriber is null || Subscriber.Id.Equals(model.Id);
+            var subscriberId = 0;
+
+            if (!string.IsNullOrEmpty(model.Key))
+                subscriberId = int.Parse(_dataProtector.Unprotect(model.Key));
+
+            var subscriber = _context.Subscribers.SingleOrDefault(b => b.NationalId == model.NationalId);
+            var isAllowed = subscriber is null || subscriber.Id.Equals(subscriberId);
 
             return Json(isAllowed);
         }
 
         public IActionResult AllowMobileNumber(SubscriberFormViewModel model)
         {
-            var Subscriber = _context.Subscribers.SingleOrDefault(b => b.MobileNumber == model.MobileNumber);
-            var isAllowed = Subscriber is null || Subscriber.Id.Equals(model.Id);
+            var subscriberId = 0;
+
+            if (!string.IsNullOrEmpty(model.Key))
+                subscriberId = int.Parse(_dataProtector.Unprotect(model.Key));
+
+            var subscriber = _context.Subscribers.SingleOrDefault(b => b.MobileNumber == model.MobileNumber);
+            var isAllowed = subscriber is null || subscriber.Id.Equals(subscriberId);
 
             return Json(isAllowed);
         }
 
         public IActionResult AllowEmail(SubscriberFormViewModel model)
         {
-            var Subscriber = _context.Subscribers.SingleOrDefault(b => b.Email == model.Email);
-            var isAllowed = Subscriber is null || Subscriber.Id.Equals(model.Id);
+            var subscriberId = 0;
+
+            if (!string.IsNullOrEmpty(model.Key))
+                subscriberId = int.Parse(_dataProtector.Unprotect(model.Key));
+
+            var subscriber = _context.Subscribers.SingleOrDefault(b => b.Email == model.Email);
+            var isAllowed = subscriber is null || subscriber.Id.Equals(subscriberId);
 
             return Json(isAllowed);
         }
