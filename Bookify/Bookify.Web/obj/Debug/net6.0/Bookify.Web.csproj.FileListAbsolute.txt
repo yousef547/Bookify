@@ -265,3 +265,10 @@ D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\runti
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\WhatsAppCloudApi.dll

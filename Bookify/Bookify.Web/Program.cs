@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using UoN.ExpressiveAnnotations.NetCore.DependencyInjection;
+using WhatsAppCloudApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +43,7 @@ builder.Services.AddAutoMapper(Assembly.GetAssembly(typeof(MappingProfile)));
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection(nameof(CloudinarySettings)));
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection(nameof(MailSettings)));
 builder.Services.AddExpressiveAnnotations();
+builder.Services.AddWhatsAppApiClient(builder.Configuration);
 builder.Services.Configure<SecurityStampValidatorOptions>(option =>
 {
     option.ValidationInterval = TimeSpan.Zero;

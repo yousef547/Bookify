@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wq5WmZDv4ZBpKoj8ivvdrh99JDMofU03wa+5d/v6UEb5yAtsmoB62kYnD4ETLhzDMVwpc9Ky0IqDRV5vjBhHQw==",
+  "dgSpecHash": "McjY+jwnLg2Ao0pmfDKsX03o61dDTManVqJoMHSOjgFwiBTl6Qe6T4bbGroJsoh6lydpAqL/gXfCchQ8mjAOYA==",
   "success": true,
   "projectFilePath": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\Bookify.Web.csproj",
   "expectedPackageFiles": [
@@ -100,9 +100,11 @@
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.22\\microsoft.entityframeworkcore.tools.6.0.22.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
-    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
-    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
+    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.0\\microsoft.extensions.configuration.binder.7.0.0.nupkg.sha512",
+    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\6.0.22\\microsoft.extensions.fileproviders.embedded.6.0.22.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.22\\microsoft.extensions.identity.core.6.0.22.nupkg.sha512",
@@ -110,8 +112,8 @@
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.objectpool\\2.1.1\\microsoft.extensions.objectpool.2.1.1.nupkg.sha512",
-    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.identity.client\\4.21.1\\microsoft.identity.client.4.21.1.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.8.0\\microsoft.identitymodel.jsonwebtokens.6.8.0.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\microsoft.identitymodel.logging\\6.8.0\\microsoft.identitymodel.logging.6.8.0.nupkg.sha512",
@@ -245,7 +247,8 @@
     "C:\\Users\\AL_hamd\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\AL_hamd\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\AL_hamd\\.nuget\\packages\\uon.expressiveannotations.netcore\\1.0.0\\uon.expressiveannotations.netcore.1.0.0.nupkg.sha512"
+    "C:\\Users\\AL_hamd\\.nuget\\packages\\uon.expressiveannotations.netcore\\1.0.0\\uon.expressiveannotations.netcore.1.0.0.nupkg.sha512",
+    "C:\\Users\\AL_hamd\\.nuget\\packages\\whatsappcloudapi\\1.0.0\\whatsappcloudapi.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }

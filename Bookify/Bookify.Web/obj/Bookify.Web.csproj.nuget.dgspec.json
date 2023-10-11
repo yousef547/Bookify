@@ -88,6 +88,10 @@
             "UoN.ExpressiveAnnotations.NetCore": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "WhatsAppCloudApi": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

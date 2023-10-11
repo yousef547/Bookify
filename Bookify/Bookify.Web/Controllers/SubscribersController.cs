@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using WhatsAppCloudApi;
+using WhatsAppCloudApi.Services;
 
 namespace Bookify.Web.Controllers
 {
@@ -22,18 +24,21 @@ namespace Bookify.Web.Controllers
         private readonly IMapper _mapper;
         private readonly IDataProtector _dataProtector;
         private readonly IImageService _imageService;
+        private readonly IWhatsAppClient _whatsApp;
 
-        public SubscribersController(ApplicationDbContext context, IMapper mapper, IImageService imageService, IDataProtectionProvider dataProtector)
+        public SubscribersController(ApplicationDbContext context, IMapper mapper, IImageService imageService, IDataProtectionProvider dataProtector, IWhatsAppClient whatsApp)
         {
             _context = context;
             _mapper = mapper;
             _dataProtector = dataProtector.CreateProtector("MySecureKey");
             _imageService = imageService;
+            _whatsApp = whatsApp;
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var result = await _whatsApp.SendMessage("201150705993", WhatsAppLanguageCode.Arabic, "arabic");
             return View();
         }
 
@@ -173,7 +178,7 @@ namespace Bookify.Web.Controllers
 
             _context.SaveChanges();
 
-            return RedirectToAction(nameof(Details), new { id = Subscriber.Id });
+            return RedirectToAction(nameof(Details), new { id = model.Key });
         }
 
         [AjaxOnly]
