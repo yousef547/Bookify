@@ -11,21 +11,19 @@ namespace Bookify.Web.Services
 		{
 			_webHostEnvironment = webHostEnvironment;
 		}
+        public string GetEmailBody(string template, Dictionary<string, string> placeholders)
+        {
+            var filePath = $"{_webHostEnvironment.WebRootPath}/templates/{template}.html";
+            StreamReader str = new(filePath);
 
-		public string GetEmailBody(string imageUrl, string header, string body, string url, string linkTitle)
-		{
-			var filePath = $"{_webHostEnvironment.WebRootPath}/templates/email.html";
-			StreamReader str = new(filePath);
+            var templateContent = str.ReadToEnd();
+            str.Close();
 
-			var template = str.ReadToEnd();
-			str.Close();
+            foreach (var placeholder in placeholders)
+                templateContent =
+                    templateContent.Replace($"[{placeholder.Key}]", placeholder.Value);
 
-			return template
-				.Replace("[imageUrl]", imageUrl)
-				.Replace("[header]", header)
-				.Replace("[body]", body)
-				.Replace("[url]", url)
-				.Replace("[linkTitle]", linkTitle);
-		}
+            return templateContent;
+        }
 	}
 }

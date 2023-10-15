@@ -365,12 +365,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\Subscribers\\373e2827-02b0-41b2-ad87-c9b6d00df9a9.png",
+      "PackagePath": "staticwebassets\\images\\Subscribers\\373e2827-02b0-41b2-ad87-c9b6d00df9a9.png"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\Subscribers\\a2722947-c2a1-4f38-8a44-59245a58eed1.png",
       "PackagePath": "staticwebassets\\images\\Subscribers\\a2722947-c2a1-4f38-8a44-59245a58eed1.png"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\Subscribers\\ea9fabd3-42dc-4bbd-a518-16784e983b70.png",
+      "PackagePath": "staticwebassets\\images\\Subscribers\\ea9fabd3-42dc-4bbd-a518-16784e983b70.png"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\Subscribers\\thumb\\373e2827-02b0-41b2-ad87-c9b6d00df9a9.png",
+      "PackagePath": "staticwebassets\\images\\Subscribers\\thumb\\373e2827-02b0-41b2-ad87-c9b6d00df9a9.png"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\Subscribers\\thumb\\a2722947-c2a1-4f38-8a44-59245a58eed1.png",
       "PackagePath": "staticwebassets\\images\\Subscribers\\thumb\\a2722947-c2a1-4f38-8a44-59245a58eed1.png"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\Subscribers\\thumb\\ea9fabd3-42dc-4bbd-a518-16784e983b70.png",
+      "PackagePath": "staticwebassets\\images\\Subscribers\\thumb\\ea9fabd3-42dc-4bbd-a518-16784e983b70.png"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\images\\books\\02dd520d-587d-4760-9f66-8ff150ed4302.jpg",
@@ -1813,6 +1829,10 @@
       "PackagePath": "staticwebassets\\js\\profile.js"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\renew.js",
+      "PackagePath": "staticwebassets\\js\\renew.js"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -1975,6 +1995,10 @@
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\templates\\email.html",
       "PackagePath": "staticwebassets\\templates\\email.html"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\templates\\notification.html",
+      "PackagePath": "staticwebassets\\templates\\notification.html"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Bookify.Web.Microsoft.AspNetCore.StaticWebAssets.props",
