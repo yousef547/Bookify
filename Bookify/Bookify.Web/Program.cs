@@ -1,10 +1,14 @@
 using Bookify.Web.Core.Mapping;
 using Bookify.Web.Core.Models;
 using Bookify.Web.Data;
+using Bookify.Web.Filters;
 using Bookify.Web.Helpers;
 using Bookify.Web.Seeds;
 using Bookify.Web.Services;
 using Bookify.Web.Settings;
+using Hangfire;
+using Hangfire.Dashboard;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -38,6 +42,10 @@ builder.Services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, Applica
 builder.Services.AddTransient<IImageService, ImageService>();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddTransient<IEmailBodyBuilder, EmailBodyBuilder>();
+
+builder.Services.AddHangfire(x => x.UseSqlServerStorage(connectionString));
+builder.Services.AddHangfireServer();
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddAutoMapper(Assembly.GetAssembly(typeof(MappingProfile)));
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection(nameof(CloudinarySettings)));
@@ -48,6 +56,13 @@ builder.Services.Configure<SecurityStampValidatorOptions>(option =>
 {
     option.ValidationInterval = TimeSpan.Zero;
 });
+
+builder.Services.Configure<AuthorizationOptions>(options =>
+options.AddPolicy("AdminsOnly", policy =>
+{
+	policy.RequireAuthenticatedUser();
+	policy.RequireRole(AppRoles.Admin);
+}));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -78,7 +93,16 @@ var roleManger = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRo
 var userManger = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
 await DefaultRoles.SeedAsync(roleManger);
-await DefaultUsers.SeedAdminUserAsync(userManger); 
+await DefaultUsers.SeedAdminUserAsync(userManger);
+app.UseHangfireDashboard("/hangfire", new DashboardOptions
+{
+	DashboardTitle = "Bookify Dashboard",
+	IsReadOnlyFunc = (DashboardContext context) => true,
+    Authorization = new IDashboardAuthorizationFilter[]
+    {
+        new HangfireAuthorizationFilter("AdminsOnly")
+    }
+});
 
 app.MapControllerRoute(
     name: "default",

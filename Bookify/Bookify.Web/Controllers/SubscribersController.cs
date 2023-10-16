@@ -5,6 +5,7 @@ using Bookify.Web.Core.ViewModel;
 using Bookify.Web.Data;
 using Bookify.Web.Filters;
 using Bookify.Web.Services;
+using Hangfire;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
@@ -131,8 +132,21 @@ namespace Bookify.Web.Controllers
             _context.Add(Subscriber);
             _context.SaveChanges();
 
-            //TODO: Send welcome email
-                var protectId = _dataProtector.Protect(Subscriber.Id.ToString());
+			var placeholders = new Dictionary<string, string>()
+			{
+				{ "imageUrl", "https://res.cloudinary.com/devcreed/image/upload/v1668739431/icon-positive-vote-2_jcxdww.svg" },
+				{ "header", $"Welcome {model.FirstName}," },
+				{ "body", "thanks for joining Bookify 🤩" }
+			};
+
+			var body = _emailBodyBuilder.GetEmailBody(EmailTemplates.Notification, placeholders);
+
+			BackgroundJob.Enqueue(() => _emailSender.SendEmailAsync(
+				model.Email,
+				"Welcome to Bookify", body));
+
+			//TODO: Send welcome email
+			var protectId = _dataProtector.Protect(Subscriber.Id.ToString());
 
             return RedirectToAction(nameof(Details), new { id = protectId });
         }
@@ -253,7 +267,7 @@ namespace Bookify.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RenewSubscription(string sKey)
+        public IActionResult RenewSubscription(string sKey)
         {
             var subscriberId = int.Parse(_dataProtector.Unprotect(sKey));
 
@@ -296,9 +310,9 @@ namespace Bookify.Web.Controllers
             var body = _emailBodyBuilder.GetEmailBody(EmailTemplates.Notification, placeholders);
 
 
-        await _emailSender.SendEmailAsync(
-                subscriber.Email,
-                "Bookify Subscription Renewal", body);
+			BackgroundJob.Enqueue(() => _emailSender.SendEmailAsync(
+			subscriber.Email,
+				"Bookify Subscription Renewal", body));
 
             //if (subscriber.HasWhatsApp)
             //{
