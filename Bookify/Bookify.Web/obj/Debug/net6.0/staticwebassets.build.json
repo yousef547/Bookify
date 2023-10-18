@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nrw3lUkptOb0zHI4krLETfwjrEHRz5lTomHGYXY2wcI=",
+  "Hash": "Vu4QmVux9XDyKXdo0loZwvx8dSyL50rqjTBUwEBSvOE=",
   "Source": "Bookify.Web",
   "BasePath": "_content/Bookify.Web",
   "Mode": "Default",
@@ -8838,6 +8838,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\renew.js"
+    },
+    {
+      "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\rental-form.js",
+      "SourceId": "Bookify.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\",
+      "BasePath": "_content/Bookify.Web",
+      "RelativePath": "js/rental-form.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\rental-form.js"
     },
     {
       "Identity": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\site.js",

@@ -1,5 +1,6 @@
 ﻿using Hangfire.Annotations;
 using Hangfire.Dashboard;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Bookify.Web.Filters
 {

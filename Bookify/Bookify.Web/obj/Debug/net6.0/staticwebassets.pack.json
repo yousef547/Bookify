@@ -1833,6 +1833,10 @@
       "PackagePath": "staticwebassets\\js\\renew.js"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\rental-form.js",
+      "PackagePath": "staticwebassets\\js\\rental-form.js"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
