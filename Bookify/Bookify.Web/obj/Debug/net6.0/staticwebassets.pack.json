@@ -205,6 +205,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\reset-password.svg"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\stop.png",
+      "PackagePath": "staticwebassets\\assets\\images\\stop.png"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\js\\plugins.bundle.js",
       "PackagePath": "staticwebassets\\assets\\js\\plugins.bundle.js"
     },
