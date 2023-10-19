@@ -224,8 +224,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Rentals/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFsc1xDcmVhdGUuY3NodG1s
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Rentals/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFsc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Rentals/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFsc1xGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Rentals/NotAllowedRental.cshtml]

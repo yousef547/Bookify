@@ -1,8 +1,6 @@
 ﻿@model IEnumerable<RentalViewModel>
 
-@if(!Model.Any())
-{
-	<div class="alert bg-light-info border border-info border-3 border-dashed d-flex flex-column flex-sm-row w-100 p-5 mt-10">
+	<div class="alert bg-light-info border border-info border-3 border-dashed d-flex flex-column flex-sm-row w-100 p-5 mt-10" style="display: @(Model.Any() ? "none !important" : "unset")" id="Alert">
 		<!--begin::Icon-->
 		<!--begin::Svg Icon | path: icons/duotune/general/gen007.svg-->
 		<span class="svg-icon svg-icon-2hx svg-icon-info me-4 mb-5 mb-sm-0">
@@ -19,12 +17,9 @@
 		</div>
 		<!--end::Content-->
 	</div>
-}
-else
-{
-    <div class="table-responsive">
+<div class="table-responsive" style="display: @(!Model.Any() ? "none !important" : "unset")" id="RentalsTable">
         <!--begin::Table-->
-        <table class="table align-middle gs-0 gy-4">
+    <table class="table align-middle gs-0 gy-4" >
             <!--begin::Table head-->
             <thead>
                 <tr class="fw-bold text-muted bg-light">
@@ -56,6 +51,10 @@ else
                             @rental.CreatedOn
                         </td>
                         <td class="text-end pe-4">
+                            @if (rental.CreatedOn.Date == DateTime.Today)
+                            {
+                                <a href="javascript:;" class="btn btn-light-danger btn-sm js-cancel-rental" data-id="@rental.Id">Cancel</a>
+                            }
                             <a class="btn btn-primary btn-sm" asp-controller="Rentals" asp-action="Details" asp-route-id="@rental.Id">Details</a>
                         </td>
                     </tr>
@@ -65,4 +64,3 @@ else
         </table>
         <!--end::Table-->
     </div>
-}

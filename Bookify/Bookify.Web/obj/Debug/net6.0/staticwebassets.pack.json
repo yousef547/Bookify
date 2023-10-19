@@ -1833,16 +1833,16 @@
       "PackagePath": "staticwebassets\\js\\profile.js"
     },
     {
-      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\renew.js",
-      "PackagePath": "staticwebassets\\js\\renew.js"
-    },
-    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\rental-form.js",
       "PackagePath": "staticwebassets\\js\\rental-form.js"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\subscriber-details.js",
+      "PackagePath": "staticwebassets\\js\\subscriber-details.js"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\subscriber-form.js",
