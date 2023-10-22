@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <None Include="GlobalUsings.cs" />
+    <None Include="Views\Dashboard\Index.cshtml" />
     <None Include="Views\Rentals\_CopyDetails.cshtml" />
     <None Include="Views\Rentals\_SearchForm.cshtml" />
     <None Include="Views\Subscribers\Details.cshtml" />
