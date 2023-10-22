@@ -33,6 +33,15 @@
             </a>
         </div>
     }
+       else if(Model.RentalCopies.Any(c => !c.ReturnDate.HasValue))
+    {
+        <div>
+            <a class="btn btn-sm btn-primary" asp-action="Return" asp-route-id="@Model.Id">
+                <i class="bi bi-plus-square-dotted"></i>
+                Return
+            </a>
+        </div>
+    }
 </div>
 
 <div class="card pt-4 mb-6 mb-xl-9">
