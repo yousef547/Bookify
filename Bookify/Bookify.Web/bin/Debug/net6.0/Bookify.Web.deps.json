@@ -11,6 +11,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "CloudinaryDotNet": "1.22.0",
           "Hangfire": "1.8.5",
+          "Hashids.net": "1.7.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.22",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.22",
           "Microsoft.AspNetCore.Identity.UI": "6.0.22",
@@ -158,6 +159,14 @@
           "lib/netstandard2.0/Hangfire.SqlServer.dll": {
             "assemblyVersion": "1.8.5.0",
             "fileVersion": "1.8.5.0"
+          }
+        }
+      },
+      "Hashids.net/1.7.0": {
+        "runtime": {
+          "lib/net6.0/Hashids.net.dll": {
+            "assemblyVersion": "1.7.0.0",
+            "fileVersion": "1.7.0.0"
           }
         }
       },
@@ -2937,6 +2946,13 @@
       "sha512": "sha512-U7lYPtSPjgxkCHAeGwtXWiTTIUReuR/+rS4F5ZLZbxYiLT1PXVpw3HJ/9Mgf09ReGCLTto6QLCep+BPjLH8Wvg==",
       "path": "hangfire.sqlserver/1.8.5",
       "hashPath": "hangfire.sqlserver.1.8.5.nupkg.sha512"
+    },
+    "Hashids.net/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TuQ8ns5c+eeIOHSgJdwCLb0nWzKqn2gCPSLFoz6nWdhw3tS5Wa43qrwRXT4UJT7XVgHqKssacVU1SGlAOWjeIg==",
+      "path": "hashids.net/1.7.0",
+      "hashPath": "hashids.net.1.7.0.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",

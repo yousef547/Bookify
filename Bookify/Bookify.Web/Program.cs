@@ -9,6 +9,7 @@ using Bookify.Web.Services;
 using Bookify.Web.Settings;
 using Hangfire;
 using Hangfire.Dashboard;
+using HashidsNet;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
@@ -57,6 +58,7 @@ builder.Services.Configure<SecurityStampValidatorOptions>(option =>
 {
     option.ValidationInterval = TimeSpan.Zero;
 });
+builder.Services.AddSingleton<IHashids>(_ => new Hashids("f1nd1ngn3m0", minHashLength: 11));
 
 builder.Services.Configure<AuthorizationOptions>(options =>
 options.AddPolicy("AdminsOnly", policy =>

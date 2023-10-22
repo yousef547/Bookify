@@ -189,6 +189,14 @@
       "PackagePath": "staticwebassets\\assets\\images\\bg8.jpg"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\bg9-dark.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\bg9-dark.jpg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\books-bg.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\books-bg.webp"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\login.svg",
       "PackagePath": "staticwebassets\\assets\\images\\login.svg"
     },
@@ -203,6 +211,18 @@
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\reset-password.svg",
       "PackagePath": "staticwebassets\\assets\\images\\reset-password.svg"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\search-dark.png",
+      "PackagePath": "staticwebassets\\assets\\images\\search-dark.png"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\search.png",
+      "PackagePath": "staticwebassets\\assets\\images\\search.png"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\staff.png",
+      "PackagePath": "staticwebassets\\assets\\images\\staff.png"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\stop.png",
@@ -363,6 +383,10 @@
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\css\\typeahead.css",
+      "PackagePath": "staticwebassets\\css\\typeahead.css"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\favicon.ico",
@@ -1829,12 +1853,20 @@
       "PackagePath": "staticwebassets\\js\\books.js"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\dashboard.js"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\profile.js",
       "PackagePath": "staticwebassets\\js\\profile.js"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\rental-form.js",
       "PackagePath": "staticwebassets\\js\\rental-form.js"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\search.js",
+      "PackagePath": "staticwebassets\\js\\search.js"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\site.js",
@@ -1921,6 +1953,10 @@
       "PackagePath": "staticwebassets\\lib\\expressive-annotations-validate\\expressive.annotations.validate.min.js"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\handlebars.js\\handlebars.min.js",
+      "PackagePath": "staticwebassets\\lib\\handlebars.js\\handlebars.min.js"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\jquery-ajax-unobtrusive\\jquery.unobtrusive-ajax.js",
       "PackagePath": "staticwebassets\\lib\\jquery-ajax-unobtrusive\\jquery.unobtrusive-ajax.js"
     },
@@ -1999,6 +2035,10 @@
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\toastify-js\\toastify.min.js",
       "PackagePath": "staticwebassets\\lib\\toastify-js\\toastify.min.js"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\lib\\typeahead.js\\typeahead.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\typeahead.js\\typeahead.bundle.min.js"
     },
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\templates\\email.html",

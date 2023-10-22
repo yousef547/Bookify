@@ -290,3 +290,4 @@ D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\sv\Ha
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\tr-TR\Hangfire.Core.resources.dll
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\zh-TW\Hangfire.Core.resources.dll
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\zh\Hangfire.Core.resources.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Hashids.net.dll

@@ -16,6 +16,8 @@
     <None Include="Views\Dashboard\Index.cshtml" />
     <None Include="Views\Rentals\_CopyDetails.cshtml" />
     <None Include="Views\Rentals\_SearchForm.cshtml" />
+    <None Include="Views\Search\Details.cshtml" />
+    <None Include="Views\Search\Index.cshtml" />
     <None Include="Views\Subscribers\Details.cshtml" />
     <None Include="Views\Subscribers\Form.cshtml" />
     <None Include="Views\Subscribers\Index.cshtml" />
@@ -45,12 +47,15 @@
     <None Include="wwwroot\lib\bootbox.js\bootbox.min.js" />
     <None Include="wwwroot\lib\expressive-annotations-validate\expressive.annotations.validate.js" />
     <None Include="wwwroot\lib\expressive-annotations-validate\expressive.annotations.validate.min.js" />
+    <None Include="wwwroot\lib\handlebars.js\handlebars.min.js" />
+    <None Include="wwwroot\lib\typeahead.js\typeahead.bundle.min.js" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="CloudinaryDotNet" Version="1.22.0" />
     <PackageReference Include="Hangfire" Version="1.8.5" />
+    <PackageReference Include="Hashids.net" Version="1.7.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.22" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.22" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.22" />

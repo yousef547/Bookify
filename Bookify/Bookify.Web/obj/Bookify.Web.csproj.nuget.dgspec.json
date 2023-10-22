@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[1.8.5, )"
             },
+            "Hashids.net": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.22, )"
