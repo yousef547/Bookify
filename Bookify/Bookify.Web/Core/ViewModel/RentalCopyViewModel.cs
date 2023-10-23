@@ -3,6 +3,8 @@
     public class RentalCopyViewModel
     {
         public BookCopyViewModel? BookCopy { get; set; }
+        public RentalViewModel? Rental { get; set; }
+
         public DateTime RentalDate { get; set; }
         public DateTime EndDate { get; set; }
         public DateTime? ReturnDate { get; set; }

@@ -157,6 +157,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\Vault-bro.svg"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\analysis.png",
+      "PackagePath": "staticwebassets\\assets\\images\\analysis.png"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\assets\\images\\avatar-blank.svg",
       "PackagePath": "staticwebassets\\assets\\images\\avatar-blank.svg"
     },
@@ -1865,6 +1869,10 @@
       "PackagePath": "staticwebassets\\js\\rental-form.js"
     },
     {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\reports.js",
+      "PackagePath": "staticwebassets\\js\\reports.js"
+    },
+    {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\js\\search.js",
       "PackagePath": "staticwebassets\\js\\search.js"
     },
@@ -2047,6 +2055,10 @@
     {
       "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\templates\\notification.html",
       "PackagePath": "staticwebassets\\templates\\notification.html"
+    },
+    {
+      "Id": "D:\\Cources\\mohamed helal .net\\Bookify\\Bookify\\Bookify.Web\\wwwroot\\templates\\report.html",
+      "PackagePath": "staticwebassets\\templates\\report.html"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Bookify.Web.Microsoft.AspNetCore.StaticWebAssets.props",

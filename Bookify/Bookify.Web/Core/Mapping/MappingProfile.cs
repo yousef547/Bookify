@@ -71,10 +71,13 @@ namespace Bookify.Web.Core.Mapping
          .ForMember(dest => dest.Governorate, opt => opt.MapFrom(src => src.Governorate!.Name));
 
             CreateMap<Subscription, SubscriptionViewModel>();
-			//Rentals
-			CreateMap<Rental, RentalViewModel>();
-			CreateMap<RentalCopy, RentalCopyViewModel>();
+            //Rentals
+            CreateMap<Rental, RentalViewModel>();
+            CreateMap<RentalCopy, RentalCopyViewModel>();
+            CreateMap<RentalCopy, CopyHistoryViewModel>()
+                .ForMember(dest => dest.SubscriberMobile, opt => opt.MapFrom(src => src.Rental!.Subscriber!.MobileNumber))
+                .ForMember(dest => dest.SubscriberName, opt => opt.MapFrom(src => $"{src.Rental!.Subscriber!.FirstName} {src.Rental!.Subscriber!.LastName}"));
 
-		}
+        }
     }
 }

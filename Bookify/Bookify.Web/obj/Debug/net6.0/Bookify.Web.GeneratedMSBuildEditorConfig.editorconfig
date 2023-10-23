@@ -252,6 +252,34 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFsc1xfU2VhcmNoRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Reports/Books.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xCb29rcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Reports/BooksTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xCb29rc1RlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Reports/DelayedRentals.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xEZWxheWVkUmVudGFscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Reports/DelayedRentalsTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xEZWxheWVkUmVudGFsc1RlbXBsYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Reports/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Reports/Rentals.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xSZW50YWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Reports/RentalsTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xSZW50YWxzVGVtcGxhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Search/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -290,6 +318,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_ModalFooter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbEZvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_Pagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_ReportsLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SZXBvcnRzTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Cources/mohamed helal .net/Bookify/Bookify/Bookify.Web/Views/Shared/_ValidationScriptsPartial.cshtml]

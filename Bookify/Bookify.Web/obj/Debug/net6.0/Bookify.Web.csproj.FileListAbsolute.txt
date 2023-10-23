@@ -291,3 +291,17 @@ D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\tr-TR
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\zh-TW\Hangfire.Core.resources.dll
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\zh\Hangfire.Core.resources.dll
 D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Hashids.net.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\ClosedXML.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\ClosedXML.Parser.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\ExcelNumberFormat.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\RBush.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\SixLabors.Fonts.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\System.IO.Packaging.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\OpenHtmlToPdf.dll
+D:\Cources\mohamed helal .net\Bookify\Bookify\Bookify.Web\bin\Debug\net6.0\ViewToHTML.dll

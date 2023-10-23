@@ -18,6 +18,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using UoN.ExpressiveAnnotations.NetCore.DependencyInjection;
+using ViewToHTML.Extensions;
 using WhatsAppCloudApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -66,6 +67,8 @@ options.AddPolicy("AdminsOnly", policy =>
 	policy.RequireAuthenticatedUser();
 	policy.RequireRole(AppRoles.Admin);
 }));
+builder.Services.AddViewToHTML();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
